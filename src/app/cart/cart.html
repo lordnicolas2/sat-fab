@@ -1,0 +1,33 @@
+<div class="text-center">
+    <h3>PEDIDO</h3>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>NOMBRE</th>
+            <th>CANTIDAD</th>
+            <th>SUBTOTAL</th>
+        </tr>
+    </thead>
+
+    <tbody *ngIf="(cartList$ | async) as cartList">
+        
+        <tr *ngFor="let ship of cartList">
+            <td>{{ ship.name }}</td>
+            <td class="text-center">{{ ship.quantity }}</td>
+            <td class="text-end">{{ ship.cost * ship.quantity}}</td>
+        </tr>
+       
+        <tr class="fw-bold">
+            <td>TOTAL:</td>
+            <td></td>
+            <td class="text-end">{{getTotal(cartList)}}</td>
+        </tr>
+   
+    </tbody>
+</table>
+
+<div class="text-end mt-3"> <!--al clikearlo recarga la página entera emulando que se hizo el pedido y aceptando una nuevo-->
+    <button class="btn btn-success" (click)="reloadPage()">Encargar</button>
+</div>

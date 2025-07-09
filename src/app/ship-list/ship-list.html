@@ -1,0 +1,41 @@
+<table class="table text-center">
+    <thead>
+        <tr>
+            <th>IMAGEN</th>
+            <th>NOMBRE</th>
+            <th>DESCRIPCIÓN</th>
+            <th>COSTE</th>
+            <th>FABRICAR</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ship of ships">
+            <td><img [src]="ship.image" [alt]="ship.name" width="100" height="auto"></td>
+            <td>{{ship.name}}</td>
+            <td class="align-middle ">
+                <span class="btn btn-success clickable" [routerLink]="['/descriptions']" [fragment]="ship.name">CLICK</span>
+            </td>
+            <td>{{ship.cost}}</td>
+            <td class="text-center align-middle">
+                <div class="d-flex justify-content-center align-items-center gap-1">
+                    <button class="btn btn-primary btn-sm" (click)="downQuantity(ship)">-</button>
+                    <input type="number" [(ngModel)]="ship.quantity" class="form-control text-center">
+                    <button class="btn btn-primary btn-sm" (click)="upQuantity(ship)">+</button>
+                </div>
+                <div class="text-muted mt-1">
+                    Max: {{ship.stock}}
+                </div>
+                <button 
+                    class="btn btn-success mt-2"
+                    *ngIf="ship.stock > 0"
+                    [disabled]="ship.quantity === 0 || ship.quantity > ship.stock"
+                    (click)="addToCart(ship)">
+                    Encargar
+                </button>
+            </td>
+        </tr> 
+    </tbody>
+</table>
+
+
+

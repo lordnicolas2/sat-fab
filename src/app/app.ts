@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { Ship } from './ship-list/Ship';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './app.scss'
 })
 export class App {
-  protected title = 'satfab';
+  title: string = "Satélite fábrica";
 }

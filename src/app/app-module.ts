@@ -3,14 +3,27 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { ShipList } from './ship-list/ship-list';
+
+import { FormsModule } from '@angular/forms';
+import { Cart } from './cart/cart';
+import { SatfabShips } from './satfab-ships/satfab-ships';
+import { Descriptions } from './descriptions/descriptions';
+//import { InputInteger } from './input-integer/input-integer';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    ShipList,
+    Cart,
+    SatfabShips,
+    Descriptions,
+  //  InputInteger
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
@@ -18,5 +31,6 @@ import { App } from './app';
     provideClientHydration(withEventReplay())
   ],
   bootstrap: [App]
+  
 })
 export class AppModule { }

@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+.encabezado {
+  background-color: #1b3d1b;
+  color: #ffffff;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  font-size: 60px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;   // título a la izquierda, imagen a la derecha
+  align-items: center;
+}
+
+.logo {
+  height: 100px;
+}
+
+.pie {
+  background-color: #1b3d1b;       // mismo verde oscuro
+  color: #ffffff;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;                // tamaño para el footer
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+h2, p, table {
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+}
+
+p, table {
+  font-size: 14px;
+}
+
+tr {
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+thead {
+  font-size: 16px;
+}
