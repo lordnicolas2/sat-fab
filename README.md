@@ -16,6 +16,8 @@ A medida que iba creando los componenentes con ng g c [nombre_del_componente] me
 - cart (en donde está la lista de pedidos)
 - decriptions (la descripción de cada nave que se accede desde el botón "click" en ship-list)
 
+-----------------
+
 - ship-cart.ts (es el serivio que usé para la comunicación entre los componentes - tampoco me agregó la parabra "service" cuando lo creé)
 
 - Ship.ts (es la interfaz que creé para tipar los datos)
