@@ -11,7 +11,7 @@ En cada tipo de nave que se puede solicitar se observa una imagen, su nombre, un
 
 Nota:
 A medida que iba creando los componenentes con ng g c [nombre_del_componente] me los creaba sin la palabra "component" en su nombre. Lo trabajé así, y avanzado el proyecto me resultó engorroso corregirlo. Los compoinentes son:
-- satfab-ships (página principal)
+- satfab-ships (página principal que contiene a ship-list y cart)
 - ship-list (en donde está el nombre, imagen, costo, botonera, y link a su descripción)
 - cart (en donde está la lista de pedidos)
 - decriptions (la descripción de cada nave que se accede desde el botón "click" en ship-list)
