@@ -4,5 +4,4 @@ export interface Ship {
     image: string;
     quantity: number;
     stock: number;
-    //order: boolean;
 }

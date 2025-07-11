@@ -21,8 +21,7 @@ export class ShipCart {
     }
       else {
         item.quantity = Number(item.quantity) + Number(ship.quantity);
-        //item.quantity += Number(ship.quantity);
-    }
+      }
     this.cartList.next(this._cartList);
 
     //  Restar stock y limpiar cantidad seleccionada
